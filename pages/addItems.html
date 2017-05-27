@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <script type="text/javascript" src="../js/addItems.js">  </script>
+</head>
+<body>
+
+  <div class="title">
+    <h1>Rate List Pakistan</h1>
+  </div>
+
+  <div id="addItems">
+    <div class="currentItems">
+    </div>
+    <form id="form">
+    	<input type="text" id="id" name="id" placeholder="ID" required="required" />
+      <input type="text" id="name" name="name" placeholder="Name" required="required" />
+      <input type="text" id="price" name="price" placeholder="Price" required="required" />
+    </form>
+
+    <div id="error"></div>
+    <button type="button" id="addItemButton" class="btn btn-primary btn-block btn-large">Add Item</button>
+    <button type="button" id="modifyItemButton" class="btn btn-primary btn-block btn-large">Modify Item</button>
+    <button type="button" id="deleteItemButton" class="btn btn-primary btn-block btn-large">Delete Item</button>
+
+  </div>
+
+    <script src="../js/index.js"></script>
+
+</body>
+</html>
