@@ -32,8 +32,10 @@ $(function(){
             window.location.replace("pages/adminHome.html");
           }
         }
+        else{
+          $("#error").text("Wrong username/password entered");
+        }
       }
-      $("#error").text("Wrong username/password entered");
     });
   });
 

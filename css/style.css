@@ -142,3 +142,8 @@ td{
 	margin: 20px auto;
 
 }*/
+#addItemButton, #modifyItemButton, #deleteItemButton{
+	display: inline;
+	width: 32.9%;
+	margin-top: 10px;
+}
