@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1045430833895",
+    "firebase_url": "https://ratelistapp.firebaseio.com",
+    "project_id": "ratelistapp",
+    "storage_bucket": "ratelistapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045430833895:android:6079d6abf8476195",
+        "android_client_info": {
+          "package_name": "com.aw.android.ratelistapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045430833895-lpu5et3o8pg1f2m1mht4n84bk0uhqfft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnTyOuCKAwzNEceNP6tS1pWV3VTJMRF6Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
