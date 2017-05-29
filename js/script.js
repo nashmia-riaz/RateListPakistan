@@ -17,24 +17,27 @@ $(function(){
   });
 
   $("#loginButton").click(function(){
+    var loading = "<img id='loading' src='../images/loading.gif'>";
+    $("#error").html(loading);
     username = $("#username").val();
     password = $("#password").val();
 
     var x = firebase.database().ref().child("admins").once('value').then(function(snapshot) {
       // e.preventDefault();/
       var admins = snapshot.val();
-
+      var adminFound = false;
       console.log(username);
       console.log(password);
       for (var i=1;  i<admins.length;i++ ){
         if(username == admins[i].username){
           if(password == admins[i].password){
             window.location.replace("pages/adminHome.html");
+            adminFound = true;
           }
         }
-        else{
-          $("#error").text("Wrong username/password entered");
-        }
+      }
+      if(adminFound == false){
+        $("#error").text("Wrong username/password entered");
       }
     });
   });
