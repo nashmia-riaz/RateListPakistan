@@ -5,19 +5,13 @@ package com.aw.android.ratelistapp;
  */
 
 import android.app.Activity;
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.aw.android.ratelistapp.List_Adapter;
-import com.aw.android.ratelistapp.R;
 import com.aw.android.ratelistapp.model.item;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -47,9 +41,10 @@ public class search_item_activity extends Activity {
         // Capture the layout's TextView and set the string as its text
 //        TextView textView = (TextView) findViewById(R.id.textView);
 //        textView.setText(message);
+        Intent intent = getIntent();
 
-        if(getIntent() != null){
-            Intent intent = getIntent();
+        if(intent.getStringExtra(BarcodeActivity.EXTRA_MESSAGE) != null){
+
             String message = intent.getStringExtra(BarcodeActivity.EXTRA_MESSAGE);
 
             searchbyname(message);
@@ -67,7 +62,7 @@ public class search_item_activity extends Activity {
                 dataSnapshot = dataSnapshot.child("items");
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     item post = postSnapshot.getValue(item.class);
-                    if(name.equals(post.getName())){
+                    if(post.getName().toLowerCase().contains(name.toLowerCase())){
                         nview.setText("Name: " + post.getName());
                         idview.setText("ID: "+post.getId());
                         rview.setText("Price: "+post.getRate());

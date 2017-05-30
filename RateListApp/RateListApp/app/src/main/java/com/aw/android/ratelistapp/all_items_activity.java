@@ -40,15 +40,17 @@ public class all_items_activity extends ListActivity {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                itemsList.clear();
                 dataSnapshot = dataSnapshot.child("items");
                 Log.v("Count " ,""+dataSnapshot.getChildrenCount());
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     Log.v("Item " ,""+postSnapshot.getValue(item.class).getName());
                     item post = postSnapshot.getValue(item.class);
                     itemsList.add(post);
-                    adapter.notifyDataSetChanged();
+
 
                 }
+                adapter.notifyDataSetChanged();
             }
 
             @Override
