@@ -17,7 +17,7 @@ $(function(){
   });
 
   $("#loginButton").click(function(){
-    var loading = "<img id='loading' src='../images/loading.gif'>";
+    var loading = "<img id='loading' src='images/loading.gif'>";
     $("#error").html(loading);
     username = $("#username").val();
     password = $("#password").val();
