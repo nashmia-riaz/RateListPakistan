@@ -26,15 +26,18 @@
         android:id="@+id/searchedname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
         android:text=""/>
     <TextView
         android:id="@+id/searchedid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
         android:text=""/>
     <TextView
         android:id="@+id/searchedrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="24sp"
         android:text=""/>
 </LinearLayout>
