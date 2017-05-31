@@ -89,4 +89,3 @@ public class search_item_activity extends Activity {
     }
 
 }
-
